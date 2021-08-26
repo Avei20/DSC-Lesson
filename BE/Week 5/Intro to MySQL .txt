@@ -1,0 +1,53 @@
+Database -> Kumpulan data yang di simpan di sistem komputer
+
+Relational Database -> tidak berbentuk Collection tapi bentuknya table 
+Non Relational Database -> ada collection
+
+Type : 
+    > Relational Database
+    > NoSQL Database
+    > Graph Database 
+    > etc
+
+Key
+    > Primary Key 
+    > Foreign Key -> Penanda yang menghubungkan antar dua table
+    > Surrogate Key -> Key buatan / artificial key sebagai penanda yang unique, dipakai ketika suatu tabel tidak memiliki unique Key
+     
+Structure Query Language
+    > Data Type 
+        > INT
+        > FLOAT
+        > TINYINT
+        > CHAR
+        > VARCHAR
+        > TEXT
+        > BLOB
+        > DATE 
+        > TIME
+        > DATETIME
+        > Etc.
+
+SQL Commands 
+    > Data Definition Language (DDL)
+        > CREATE
+        > ALTER
+        > DROP
+        > RENAME
+        > TRUNCATE -> Ngosongin tabel
+    > Data Query Language (DQL)
+        > SELECT
+    > Data Manipulation Language (DML)
+        > INSERT 
+        > UPDATE
+        > DELETE
+    > Data Control Language (DCL)
+        > GRANT
+        > REVOKE
+    > Transaction Manipulation Language (TCL)
+        > COMMIT
+        > ROLLBACK
+
+Apache -> Web Server
+MySQL -> Database
+

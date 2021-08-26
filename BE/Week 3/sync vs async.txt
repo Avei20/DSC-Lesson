@@ -1,0 +1,28 @@
+sync -> waterfall
+
+abcde -> harus berurutan
+
+async 
+
+acbed -> bisa ngacak 
+
+Perbedaannya ada di : 
+
+Sync : 
+
+Task 1 (1s) -> Task 2 (2s) -> Task 3 (2s)
+
+Total time : 5s
+
+lebih lambat karen jalannya ngantri, tapi datanya lebih aman 
+
+Async : 
+
+Task 1 (1s) -> 
+Task 2 (2s) -> 
+Task 3 (2s) -> 
+
+Total time = 2s
+
+lebih cepat namun ngacak karena mereka jalan barengan 
+

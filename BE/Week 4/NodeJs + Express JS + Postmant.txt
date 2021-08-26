@@ -1,0 +1,33 @@
+Node JS 
+    > sama kaya js biasa cuma ada core Module diantaranya : 
+        > fs
+        > buffer 
+        > http
+        > url
+        > path
+        > util
+        > stream
+    > gunanya untuk proses ke file sistem
+
+ExpressJS
+    > Framework yang dipake sepanjang workshop ini. 
+    > Ini yang paling populer
+        > Request & Response
+    > install lewat npm init di folder yang main di pasang 
+    > atau npm init --y biar langsung di yes yes cuma nama foldernya ga boleh ada spasi kalo ada spasi nanti dia error
+    > cara jalanin yang ada di main folder bisa di masukin ke dalam script trus tambahin bagian start langusng auto jalanin node [nama main file].js nya jadi pas di cmd langsung bilang npm start nanti dia langsung jalanin node [nama main file]nya 
+    > di dalem scrip bisa juga tambahin dev : trus node app.js tapi ga pake npm start di vmdnya tapi npm run dev
+    > install ExpressJS nya bisa pake npm install --save express
+    > nanti ada node module di foldernya ntar ada library library yang bisa dipake
+    > nanti ada package.lock.json buat ngatur depedensinya
+
+
+Postman
+    > Tools yang di pake untuk melakukan parsing ke web api nanti 
+
+> npm install --save-dev nodemon 
+    > buat nyimpan sebuah plugin biar nanti file jsnya di save servernya auto restart sendiri
+    > --save-dev ini dia nanti engga disimpan di depedensinya jadinya ga ngerusak file 
+    > nanti di package.json nya ada nodemon depedency. trus ubah scrip npm run dev atau npm startnya jadi nodemon[bama file utama].js 
+    > jadi nanti setiap file di app.js kalo di save nanti auto ngerestart sendiri servernya ga perlu cape cape npm npm lagi 
+    
