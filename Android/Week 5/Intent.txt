@@ -1,0 +1,21 @@
+Intent 
+    > A message object used to request an action from another app component 
+    > Start an Activity
+    > Start a service 
+    > Deliver a broadcast 
+    > suatu object yang bisa meminta sebuah aksi dari komponen app lainnya 
+    > u memulai activity 
+    > u/ memulai service -> proses yang berjalan di background.  
+    > u/ mengirimkan broadcast yang bisa diterima oleh aplikasi apapun 
+
+Intent Types 
+    > Explicit Intent
+        >  secara eksplisit memberi tahu android untuk melakukan activity dari mana ke mana 
+        > biasanya digunakan untuk melakukan perpindahan dari satu activity ke activity lainnya 
+        > ex : perpindahan page 
+    > Implicit Intent
+        > TIpe intent yang tidak disebutkan perpindahannya
+        > tipe yang diberikan adalah suatu aksi yang harus dilakukan oleh sistem 
+        > biasanya digunakan untuk membuka service yang ditawarkan oleh android 
+        > Ex : Calendar, Phone, Camera dsb 
+

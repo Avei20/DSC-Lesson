@@ -1,0 +1,12 @@
+Recycler View -> view Group yang digunakan untuk menampilkan data dalam jumlah yang banyak 
+    Ex : App gmail menggunakan View, dulu ada yang namanya ListView 
+        ListView mirip dengan Recycler View 
+    
+    + Ada Layout Manager
+        > Jadi bisa scroll ke kiri dan kanan
+        > bisa mengatur tampilan list yang kita buat  
+        > bisa bikin tampilan seperti grid 
+    + Performance 
+        > sesuai namanya itu dia Recycle jadi dia menambilkan view yang bisa dipakai ulang 
+        > jika List yang digunakan maka semua list harus di load terlebih dahulu sehingga boros memori
+        

@@ -1,0 +1,52 @@
+
+
+/* h1{
+    color: azure;
+} */
+/* img ini merupakan selector
+di dalam style ini merupakan properti css untuk mengatur colour background color dkk. di dalam kurung kurawal kita akan menuliskan aturan yang ingin kita masukkan */
+
+#top {
+    /* diawalin dengan tanda pagar jika ingin mengambil id nya  */
+    text-align: center;
+}
+
+
+img {
+    height : 200px;
+}
+
+table, thead, tbody, tr, th, td {
+    /* dapat memberikan banyak element dengna satu buah properti yang sama  */
+    border: 1px solid  black;
+    /* dapat diberikan 3 attribut yang bertama tebal garis kemudian tipe garis dan warna garis  */
+
+}
+
+/* div {
+    background-color: chartreuse;
+    /* terlihat di sini bahwa div ini mencakup semua baris bukan hanya hurufnya makanya div dibilang block level elemet yang artinya memenuhi width dari browser 
+} */
+
+/* span {
+    background-color: aquamarine;
+    /* span dapat dilihat di sini hanya akan mencakup hurufnya saja karena ini adalah inline level element sehinga span hanya mengammbil yang dia butuhkan saja 
+} */
+
+.box{
+    /* ini klo ngambilnya class */
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    margin: 30px; 
+    /* ngasih jarak antar element ke element lain */
+    padding: 30px;
+    /*  */
+}
+
+.red {
+    background-color: red;
+    /* css dibacanya dari atas ke bawah jadi petama itu hitam trus dia jadi merah */
+
+}

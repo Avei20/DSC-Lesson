@@ -1,0 +1,55 @@
+Local Storage
+    > Penyimpanan data di hp
+    > digunakan ketika ingin menarik data dengan cepat 
+    > ada macamnya : 
+        > Internal
+            > hilang jika aplikasinya dihapus 
+            > hanya bisa diakses oleh aplikasinya sendiri 
+            > Ex Rekaman game yang hanya bisa diakses oleh game tersebut
+        > External 
+            >  bersifat publik yang bisa di akses oleh siapa aja 
+            > datanya tidak akan hilang jika aplikasinya dihapus 
+            > Ex Gambar bisa diakses oleh google Photo dkk 
+        > Shared Preferences 
+            > bersifat key valued data 
+            > mirip dengan dictionary 
+            > digunakan untuk menyimpan data data primitif Ex : score pemain, 
+        > Database
+            > Penyimpanan yang lebih terstruktur 
+            > bisa menyimpan banyak jenis data dalam satu baris 
+            > biasa digunakan untuk menyimpan data yang kompleks dan terdiri dari lebih satu data 
+
+Shared Preferences
+    Ex code : 
+    <?xml version = '1.0' encoding='utf-8' standalone='yes' ?>
+    <map> 
+        <string name="my_string"> Hello World! </string> 
+        <int name="my_integer" value="123123"/>
+        <boolean name="my_boolean" value="true"/>
+    </map>
+
+    > key-value storage system 
+    > semuanya memrupakan tipe data primitif
+    > data data ini disimpan dalam bentuk XML 
+
+Room 
+    > abstraction layer diatas SQLite 
+    > asbtraction layer -> menyembunyikan 
+    > part of Android's Jetpack Library
+    > membantu implementasi SQLite 
+    > Room termasuk ke dalam Jetpack 
+    Schematic : 
+    Room Database <-> (get DAO) Rest of The App
+    Data Access Object (get entities from db) <-> (Persist changes back to db) Rest of The App 
+    Entities <-> (get/set field values) Rest of the App 
+
+    > Room Database 
+        > class yang nyimpan instance database kita
+    > Data Access Object
+        > Bagaimana cara kita mengakses data di dalam database yang meliputi CRUD
+    > Entities 
+        > ini adalah tabel di database 
+    > Rest of the App 
+        > Aplikasinya 
+    
+

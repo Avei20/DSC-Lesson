@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            border : 2px solid red;
+            height: 600px;
+            width: 800px;
+        }
+
+        .child {
+            border: 2px solid green;
+            height: 200px;
+            width: 200px;
+            display: inline-block;
+        }
+
+        /* body {
+            height: 1000px;
+        } */
+    </style>
+</head>
+<body>
+    <!-- static -->
+    <!-- ii ketika ga di set posisi apa apa sama aja dia ga bisa di atur top dkknya  -->
+    <h1>STATIC</h1>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+
+    <!-- relative -->
+    <!-- ii ketika ga di set posisi apa apa sama aja dia ga bisa di atur top dkknya  -->
+    <h1>SRELATIVE</h1>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"
+            style="
+            position: relative; 
+            top : 20px;
+
+        "></div>
+        <div class="child"></div>
+    </div>
+
+    <h1>ABSOLUTE</h1>
+    <div class="parent" style="position: relative;">
+        <div class="child"></div>
+        <div class="child"
+            style="
+            position: absolute; 
+            top : 0px;
+
+        "></div>
+        <div class="child"></div>
+    </div>
+
+    <h1>STICKY</h1>
+    <div class="parent" style="position: relative;">
+        <div class="child"></div>
+        <div class="child"
+            style="
+            position: sticky; 
+            top : 0;
+
+        "></div>
+        <div class="child"></div>
+    </div>
+
+    <h1>FIXED</h1>
+    <div class="parent" style="position: relative;">
+        <div class="child"></div>
+        <div class="child"
+            style="
+            position: fixed; 
+            top : 0;
+            display: none;
+        "></div>
+        <div class="child"></div>
+    </div>
+
+</body>
+</html>

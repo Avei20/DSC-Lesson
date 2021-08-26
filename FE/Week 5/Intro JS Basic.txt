@@ -1,0 +1,13 @@
+JS -> lightweight, interpreted, or just-in-time compilde programming languange that runs in the browser
+
+> menambah intertikfitas website
+
+Data Type 
+
+Boolean 
+NULL 
+Undefined
+Number 
+String 
+Symbol
+Object 

@@ -1,0 +1,14 @@
+HTTP Request -> Untuk berkomunikasi dari hape ke server 
+    > GET 
+    > POST 
+    > PUT 
+    > DELETE 
+
+Library yang akan dipake adalah Retrofit 
+    Retrofit yang paling banyak digunakan untuk melakukan HTTP Request 
+    return dari HTTP Request itu adalah JSON 
+
+GSON -> Java Library yang dikasih oleh google 
+        > Digunakan untuk Serialization dan Deserialization JSON Data 
+        > intinya untuk proses JSON ke Object nya Kotlin atau Java 
+        

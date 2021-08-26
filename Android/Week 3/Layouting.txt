@@ -1,0 +1,52 @@
+XML -> Extensible Markup Language 
+
+> Mirip kaya HTML 
+> ada tag tag nya 
+> bisa custom tag 
+> digunakan untuk storing dan tranporting data 
+> XML store data di dalam plain text format
+
+View & ViewGroup 
+View -> Something we can see in our User Interface 
+        > Ex : TextView, EditText, Button, ImageView, and etc 
+
+ViewGroup -> invisibel Container 
+            -> bisa terdiri dari banyak Vie
+            -> Ex Linear Layout, RelativeLayout, ConstrainLayout, and etc 
+
+ViewGroup 
+    > View
+    > View 
+    > ViewGroup
+        > View
+        > View
+
+ViewGroup bisa beranak pinak 
+
+LinearLayout 
+ > Display its Children Vertically or Horizontally 
+
+
+RelativeLayout 
+    > depends on other View, ViewGroup or parent
+    > semua anaknya di 0,0 saling timpa
+    > ada attribute yang sering dipakai yaitu : 
+        > layout_above 
+        > layout_below 
+        > layout_leftOf
+        > layout_rightOf
+        > layout_centerInParent 
+
+ConstrainLayout
+    > Similar to RelativeLayout (Depends on other view or parent, different attributes)
+    > Avoiding Nested layout (ViewGroup inside another ViewGroup)
+    > attribut yang sering dipake adalah : 
+        > ConstrainTop
+        > ConstrainBottom
+        > ConstrainLeft
+        > ConstrainRight
+    > Untuk menghindari Nested layout
+    > Setiap View ada constrainnya yang bisa dihubungin sama view lainnya
+    > untuk mengaturnya dibutuhkan propert Constrain Top, Constrain Left, Constrain Bottom, Constrain Right 
+    >
+Penamaan file android harus snake case spasi pake _ dan huruf kecil semua 

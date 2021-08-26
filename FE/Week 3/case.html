@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+       
+        /* .mark {
+            /* border: 2px solid black; 
+        } */
+
+        header {
+            height: 100px;
+            position: relative;
+        }
+
+        .logo {
+            height:  100%;
+            margin-left: 10px;
+        }
+
+        .brand {
+            position: absolute;
+            top : 0;
+            left : 35%;
+        }
+        .brand .title {
+            margin-bottom: 0;
+        }
+        .brand .subtitle {
+            margin-top: 0;
+        }
+        @media screen and (max-width: 400px;) {
+            .brand {
+                display: none;
+            }
+        }
+
+        nav{
+            position: sticky;
+            top : 0;
+            z-index: 1000;
+            background-color: royalblue;
+        }
+
+        nav ul{
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            
+            list-style-type: none;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a{
+            padding:  10px;
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            background-color: blue;
+        }
+
+        footer {
+            height: ;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            line-height: 3;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        aside {
+            top: 0;
+            width: 120px;
+            position: absolute;
+        }
+
+        /* aside .favorite{ */
+
+        /* } */
+        
+        aside .favorite .title {
+            font-weight: bold;
+        }
+
+        aside .favorite .item{
+            width: 120px;
+            background-color: lightcyan;
+        }
+
+        aside .favorite .item img {
+            width: 100%;
+        }  
+
+        aside .favorite .item summary {
+            font-size: 12px;
+        } 
+
+        main {
+            padding: 10px 10px 10px 130px;
+            padding-bottom: 60px;
+        }
+
+        main article .title {
+            font-size:  22px;
+            font-weight: bold;
+        }
+
+        main article .post-time {
+            display: block;
+            font-size: 14px;
+    
+        }
+
+        main article .post-content {
+            margin: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <header class="mark">
+        <img class = "logo" src="assets/aa.png" alt="">
+        <div class="brand">
+            <h1 class="title"> Avei Car Shop </h1>
+            <h4 class="subtitle">Fastest Car Only Here for Sale</h4>
+        </div>
+    </header>
+    <nav class="mark">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Car</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Content</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mark">
+        <aside class="mark">
+            <section class="favorite">
+                <span class="title">Favorite Cars</span>
+                <hr>
+                <div class="item">
+                    <img src="assets/Car/camry.jpg" alt="">
+                    <summary>
+                        <div>Toyota Camry</div>
+                        <div>Price : 100M</div>
+                    </summary>
+                </div>
+                <div class="item">
+                    <img src="assets/Car/camry.jpg" alt="">
+                    <summary>
+                        <div>Rolls-Royce</div>
+                        <div>Price : 500M</div> 
+                    </summary>
+                </div>
+                <div class="item">
+                    <img src="assets/Car/camry.jpg" alt="">
+                    <summary>
+                        <div>Subaru</div>
+                        <div>Price : 300M</div>
+                    </summary>
+                </div>
+            </section>
+        </aside>
+        <main class="mark">
+            <article>
+                <span class="title"> New Car Launched</span>
+                <span class="post-time">Posted at: 29 April 2020</span>
+                <div class="post-content">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam impedit mollitia praesentium fugit, non ex quia, cum laudantium dignissimos quidem, aperiam nulla vel. Maxime doloribus repellendus soluta molestias vitae voluptas perspiciatis modi quaerat dignissimos, sed tempore deserunt doloremque quam, esse incidunt enim suscipit laboriosam culpa saepe debitis cumque error quod nesciunt. Architecto, vero dolor quae inventore ullam quibusdam necessitatibus optio. Eius ex dignissimos beatae quasi quis amet temporibus maiores molestias sint, modi eligendi dolor velit non nesciunt officiis repudiandae recusandae blanditiis error est. Eaque, reprehenderit veniam? 
+                </div>
+            </article>
+            <article>
+                <span class="title"> New Car Launched</span>
+                <span class="post-time">Posted at: 29 April 2020</span>
+                <div class="post-content">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam impedit mollitia praesentium fugit, non ex quia, cum laudantium dignissimos quidem, aperiam nulla vel. Maxime doloribus repellendus soluta molestias vitae voluptas perspiciatis modi quaerat dignissimos, sed tempore deserunt doloremque quam, esse incidunt enim suscipit laboriosam culpa saepe debitis cumque error quod nesciunt. Architecto, vero dolor quae inventore ullam quibusdam necessitatibus optio. Eius ex dignissimos beatae quasi quis amet temporibus maiores molestias sint, modi eligendi dolor velit non nesciunt officiis repudiandae recusandae blanditiis error est. Eaque, reprehenderit veniam? 
+                </div>
+            </article>
+            <article>
+                <span class="title"> New Car Launched</span>
+                <span class="post-time">Posted at: 29 April 2020</span>
+                <div class="post-content">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam impedit mollitia praesentium fugit, non ex quia, cum laudantium dignissimos quidem, aperiam nulla vel. Maxime doloribus repellendus soluta molestias vitae voluptas perspiciatis modi quaerat dignissimos, sed tempore deserunt doloremque quam, esse incidunt enim suscipit laboriosam culpa saepe debitis cumque error quod nesciunt. Architecto, vero dolor quae inventore ullam quibusdam necessitatibus optio. Eius ex dignissimos beatae quasi quis amet temporibus maiores molestias sint, modi eligendi dolor velit non nesciunt officiis repudiandae recusandae blanditiis error est. Eaque, reprehenderit veniam? 
+                </div>
+            </article>
+            <article>
+                <span class="title"> New Car Launched</span>
+                <span class="post-time">Posted at: 29 April 2020</span>
+                <div class="post-content">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam impedit mollitia praesentium fugit, non ex quia, cum laudantium dignissimos quidem, aperiam nulla vel. Maxime doloribus repellendus soluta molestias vitae voluptas perspiciatis modi quaerat dignissimos, sed tempore deserunt doloremque quam, esse incidunt enim suscipit laboriosam culpa saepe debitis cumque error quod nesciunt. Architecto, vero dolor quae inventore ullam quibusdam necessitatibus optio. Eius ex dignissimos beatae quasi quis amet temporibus maiores molestias sint, modi eligendi dolor velit non nesciunt officiis repudiandae recusandae blanditiis error est. Eaque, reprehenderit veniam? 
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer class="mark">
+        &copy;2020 Copyright Avei 
+
+    </footer>
+</body>
+</html>

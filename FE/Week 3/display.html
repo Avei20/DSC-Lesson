@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box { 
+            /* kita set class box biar bisa di pake berkali kali  */
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- inline -->
+    <h2>inline</h2>
+    <div>
+        <!-- dipakai ketika ingin memodifikasi suatu paragraf -->
+        <!-- span sering dipake ketika ingin memodifikasi paragraf -->
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum nemo optio fuga quos sit, unde deserunt sequi <span style="color: red;">corrupti</span>  porro iure, quis iusto fugiat perspiciatis adipisci ut atque beatae, laboriosam molestias assumenda odit magni cupiditate? Repellat, at. Repellat fuga ratione, iste earum sequi molestiae rerum. Ipsum tempore molestias voluptate a?
+    </div>
+
+    <!-- block akan langsung membuat baris baru -->
+    <h2>block</h2>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum nemo optio fuga quos sit, unde deserunt sequi <span style="display: block; color: red;">corrupti</span>  porro iure, quis iusto fugiat perspiciatis adipisci ut atque beatae, laboriosam molestias assumenda odit magni cupiditate? Repellat, at. Repellat fuga ratione, iste earum sequi molestiae rerum. Ipsum tempore molestias voluptate a?
+    </div>
+
+    <!-- inlineblock -->
+    <h2>Inline -block</h2>
+    <div class="box" style="display: inline-block">
+        
+    </div>
+    <div class="box" style="display: inline-block">
+        
+    </div>
+    <div class="box" style="display: inline-block">
+        
+    </div>
+
+    <!-- none -->
+    <h2>none</h2>
+    <div class="box" style="display: inline-block; background-color: red;">
+        
+    </div>
+    <div class="box" style="display: none; background-color: black;">
+        
+    </div>
+    <div class="box" style="display: inline-block; background-color: blue;">
+        
+    </div>
+</body>
+</html>

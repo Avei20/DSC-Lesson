@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- link ini gunanya untuk mengambil suatu file lainnya -->
+</head>
+<body>
+    <!-- <h1>Developer Student Club</h1> -->
+    <!-- <h2>ini h2</h2>
+    <h3>ini h3</h3>
+    <h4>ini h4</h4>
+    <h5>ini h5</h5>
+    <h6>ini h6</h6> -->
+    <section id="top">
+        <!-- id di sini sebagai pembeda dengan element lain atau penamaan suatu section -->
+
+        <img src="https://d17ivq9b7rppb3.cloudfront.net/original/event/dsc_chapter_stmik_stikom_indonesia_introducing_developer_student_club_and_google_technologies_logo_041019113915.png" alt="ini gambar">
+
+        <!-- src adalah source gambarnya. alt ini adalah ketika web tidak bisa me load gambar tersebut sehingga yang di dalam alt akan di tampilkan -->
+        <h1 style = "color: aquamarine;">Developer Student Club</h1> 
+
+        <!-- bisa langsung di komen di dalam kurung lancip ini dinamakan inline style  -->
+
+        <p>Join Dsc</p>
+        <!-- link v paragraf ^ href merupakan salah satu attribut yang bisa mengandung hyperlink -->
+
+        <a href="https://dsc.community.dev" target="_blank">Learn more about DSC</a> 
+        <!-- target digunakan untuk ketika di clikc dia akan 
+        membuat tab baru untuk membuka link yang disimpan-->  
+    </section>
+
+    <ul> <!-- kepanjangan daru unorder list -->
+        <!-- <li>Tujuan</li> Kepanjang dari List Item -->
+        
+        <!-- <li>Background </li> -->
+        <!-- <li>Events</li> -->
+        <!-- <li>Mebers</li> -->
+        <!-- <li>Contact Us</li> -->
+        <!-- kita bisa mengganti teks tujuan dengan anker text seperti ini  -->
+        <li><a href="#tujuan">Tujuan</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#contactUs">Contact Us</a></li>
+    </ul>
+
+    <div>
+        <!-- div biasa dipake sebagai structure aja dianggap sebagai sebuah class atau hanya mengelompokkan sesuatu lebih prefer menggunaakan section keduanya ga ada bedanya -->
+    </div>
+
+    <section id="tujuan">
+        <h2>Tujuan</h2>
+        <p> <!--white space di dalam codingan  di ignore oleh browser kecuali spasi yang ada di antara huruf-->
+            <!-- lorem+angkat (tanpa spasi) = dummy text jika setelah lorem ditambahkan angka maka akan menampilkan berapa banyak wordnya-->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, veniam distinctio sit dolorum commodi placeat iste, nemo amet nihil ea ipsum. Non, atque soluta nobis maiores molestiae consectetur, voluptates velit reprehenderit eaque ad esse explicabo. Atque, fugit. Minima optio modi nam labore. Enim iste consequatur aliquam, distinctio dolores earum at ad error vero odio voluptatibus sunt in explicabo perspiciatis debitis, sint commodi non, facilis laudantium. Nulla dolore corporis nam itaque eligendi vero rem dignissimos error, temporibus ullam, quae, illo accusantium harum cupiditate aliquam voluptatum adipisci. Quo rerum cupiditate ipsa laudantium enim libero corrupti velit quia. Officia, rem dicta corrupti molestiae est maxime harum ea autem dolorem tenetur inventore hic cum, ratione itaque dolore quidem architecto sint atque amet alias. Ab voluptatum earum, repudiandae repellendus vel iusto placeat perspiciatis optio, facere omnis, necessitatibus nulla et quia! Quidem voluptatem nobis enim suscipit at tempore totam praesentium maiores, culpa voluptatum nesciunt laudantium deleniti minima quis cumque neque reiciendis odit provident! Voluptatem sunt assumenda est doloribus voluptatum explicabo alias perspiciatis recusandae. Beatae officiis ipsam nobis quisquam, numquam illum veritatis aliquid deserunt distinctio pariatur. Voluptas molestias atque tempore sit, optio repellat dolores aliquam magnam a, quos, tempora sint mollitia assumenda similique omnis aperiam quis! Ex?
+        </p>
+    </section>
+
+    <section id="events">
+        <h2>Event</h2>
+        <ol>
+            <li> Info Session </li>
+            <li>Weekly Workshop</li>
+            <li>intro to flatter (?)</li>
+        </ol> <!-- ini 11 12 dengan UL bedanya ini di depan tulisannya akan ditampilkan angka, sedangkan UL menggunakan dot-->
+    </section>
+
+    <section id="members">
+        <h2>Members</h2>
+        <table> 
+            <!-- untuk membuat sebuah table -->
+            <thead>
+                <!-- ini table bagian atas atau headernya -->
+                <tr>
+                    <!-- artinya satu baris atau satu row -->
+                    <th>
+                        <!-- header atau kepala yang paling di atas di sebuah table -->
+                        Name
+                    </th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ini isi table tersebut atau baris kedua dst -->
+                <tr>
+                    <td>
+                        <!-- td adalah menunjukkan satuan data atau satu kolom yang ada di table td pada saat ini adalah nama-->
+                        Avei
+                    </td>
+                    <td>
+                        <!-- apabila td sekali lagi maka akan langsung ke sebelah kanannya -->
+                        Student
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vein</td>
+                    <td>Student</td>
+                </tr>
+                <tr>                    
+                    <td>Xein</td>
+                    <td>Student</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contactUs">
+        <h2>Contact Us</h2>
+        <form action="">
+            <!-- form ini untuk input sesuatu -->
+            <label for="first-name">First Name</label>
+            <!-- label untuk ngasih tau ini itu siapa for merujuk ini untuk siapa -->
+            <input type="text" name="first-name" id="first-name"> 
+            <!-- type merupakan attribut dari input yang akan menampilkan kotak untuk dimasukkan inputan bertipe teks 
+            type di sini bisa banyak hal bisa password maka teks yang dimasukkan akan langsung dijadikan titik titik seperti kita memasukkan password pada umumnya
+        -->
+            <br>
+            <!-- bra adalah self closing tag yang dimana dia tidak membutuhkan closing tag sama seperti img ini gunanya untuk memberikan enter  -->
+            <label for="email">E-mail</label>
+            <input type="text" name="email" id="email">
+
+            <!-- dari sini kita dapat melihat input dan label adalah inline element  cara mengakalinnya kita harus menggunakan inline break -->
+        </form>
+    </section>
+
+    <!-- ini comment -->
+
+    <div> 
+        <!-- div itu block level element -->
+        ini div
+    </div>
+
+    <div>
+        ini div 
+    </div>
+
+    <span>
+         <!--span adalah inline level element  -->
+         <!-- perbedaannya ada pada  -->
+        <!-- ga ada enternya untuk span berbeda dengna div yang selesai div ada enternya -->
+        ini span 
+    </span>
+
+    <span>
+        ini span 
+    </span>
+
+    
+
+</body>
+</html>
+

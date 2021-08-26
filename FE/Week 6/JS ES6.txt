@@ -1,0 +1,159 @@
+Template Literal 
+    > kalo ngetik string yang panjang bisa pake ` ` trus ga perlu +  +. + nya diganti sama ${namaVariable}
+
+Arrow Function
+    > Mempermudahkan dalam membuat function 
+
+Promises
+
+State 
+> Fulfilled -> diterima
+> Rejected  -> ditolak 
+> Pending -> menunggu 
+
+Callback 
+> Resolve()
+> reject()
+
+Chain
+> .then()
+> .catch()
+> .finally()
+
+Promise lain lain 
+> Promise.all() -> untuk ngejalanin semua promise sekaligus
+> Promise.race() -> balapan siapa yang kelar lebih duluan yang lain di abaikan
+> Promise.any() -> ngejalanin promis yang selesai dan succes  
+> Promise.resolve() -> shortkey buat function yang mau langsung balikin nilai jika resolve
+> Promise.reject() -> sama kaya resolve bedanya ini di reject
+
+Promise Chaining 
+> satu promise ada banyak .then ke promise yang lain 
+> ,then nya ke promise yang lain jadi saling sambung menyambung jadi satu kaya rantai
+
+Async dan Await 
+> async await versi pendeknyda dari promise sama then 
+> contohnya : 
+    function getData()
+    {
+        return Promise.resolve(someAsyncFunction())
+            .then(() => 
+            {
+                console.log ("do more jobs.. ")
+            });
+    }
+
+    > kalo pake async await jadi kek gini : 
+    async function getData()
+    {
+        await someAsyncFunction()
+        console.log ("do more jobs..") // ini kebawah masuk ke dalam then 
+    }
+
+Class & Prototype 
+
+Class -> kaya biasa 
+Prototype -> Class untuk ES5 ke bawah 
+
+cont & let 
+let itu mirip sama var 
+
+let itu lebih memperhatikan scooping kalo var engga
+
+Enhance Object literal 
+ex : 
+//tanpa Enhance object Literal
+function foo (name, age)
+{
+    return {
+        name : name, 
+        age : age
+    }
+}
+
+//menggunakan Enchance object Literal 
+function foo (name, age )
+{
+    return {
+        name, 
+        age
+    }
+}
+
+// otomatis mengikuti nama variable nya 
+
+Destructuring Assignment 
+> berguna ketika mau nge untag array 
+ex : 
+
+var arr = [1,2,3,4]
+     > sebeluma da Destructuring Assignment
+var a = arr[0], b = arr[1], dst 
+
+> menggunakan Destructuring Assignment
+
+var [a,b,c, d] = arr
+
+> nilainya langsung masuk 
+
+Rest & Sphread Operator
+> berguna untuk membuat sebuah function dengan jumlah parameter yang tak terbatas 
+> Ex 
+function abc(...name)
+{
+    console.log(name)
+}
+ abc (akmj, bangsad, bangke , dst) // tak terhingga 
+ > lamgsung jadi array 
+ > ini namanya Rest 
+
+> Sphread
+> Dipake kalo mau extends suatu array ke array yang lain 
+EX : arr [0,1,2,3]
+brr = [23...arr]
+nanti jadinya brr -> [23,0,1,2,3]
+
+> Sphread nih kaya ngegabungin array gitu deh 
+
+Default parameter
+function efg (id = 0) // ini assign nilai id jadi 0 
+{
+
+}
+
+Generators 
+> function* -> ada bintangnya 
+> bintangnya nandain kalo ini function generator 
+> generator function adalah function yang bisa berhenti di tengah tengah 
+> berhentiinnya pake yield diikuti sama nomor berhenti 
+
+Ex : 
+function* generator ()
+{
+    console.log ("pertama")
+    yield 1 //kasih tempat stop pertama
+    console.log ("kedua")
+    yield 2 // kasih tempat stop kedua
+}
+
+kalo mau akses atau mau next stop atau next breaknya 
+
+generator.next().value
+
+Array Helper Function 
+> function tambahan pada array yang akan mempermudah kehidupan 
+> .forEach ((elem, idx, arr) =>
+{   //ini function buat ngeprint array 
+    //setiap element mau di apain 
+})
+
+> .map -> sama kayua foreach cuma dia return bentuk array 
+> .filter -> untuk ngefilter elemen mana aja yang mau di ambil, return typenya boolean 
+> .reduce((accumulator, elem, idx) =>
+{
+    
+}, 0)
+
+> reduce  
+
+

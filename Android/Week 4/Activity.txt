@@ -1,0 +1,16 @@
+Activity 
+    > Komponen yang disediakan oleh Android untuk menampilkan UI dan juga untuk berinteraksi dengan Pengguna pada UI tersebut
+    > Ex : Activity Sign In dan Activity Sign Up
+    > sama ibaratnya sama Page di website 
+    > Activity Life Cycle 
+        > perputaran Activity di aplikasi nya 
+        > Bikin activity life Stylenya 
+        > Ketika Activity dibuat makan dijalankan onCreate()
+        > onStart() -> dipanggil ketika activity di jalankan 
+        > onResume() -> dipanggil ketika activity tersebut menjadi fokus dari user 
+        > onPause() -> dipanggil ketika activity terganggu 
+        > onStop() -> dipanggil ketika activity tidak terlihat di layar 
+        > onRestart() -> dipanggil ketika activity sedang dalam status onStop() dan ingin dijalankan ulang 
+        > onDestroy() -> dipanggil ketika akan menstop atau membunuh suatu activity
+    > Android Logcat -> digunakan untuk debugging, ngelihat activity yang terjadi 
+    

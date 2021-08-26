@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+   <div>
+        <div>
+            Email: <span id="email"></span>
+        </div>
+        <div>
+            First Name: <span id="firstName"></span>
+        </div>
+        <div>
+            Last Name: <span id="lastName"></span>
+        </div>
+   </div>
+   <button id="btnClick" onclick="getUserFetch(2)">Get Data</button> 
+   <button id="btnCreate" onclick="createUserFetch()">Create</button>
+</body>
+</html>
+<script>
+    function getUserXMLHttp(userId)
+    {
+        var xhttp = new XMLHttpRequest()
+        xhttp.onreadystatechange = () =>
+        {
+            if (xhttp.readyState == 4 && xhttp.status == 200)
+            {
+                var data = JSON.parse(xhttp.responseText)
+                document.getElementById('email').innerHTML = data.data.email
+                document.getElementById('firstName').innerHTML = data.data.first_name
+                document.getElementById('lastName').innerHTML = data.data.last_name
+
+            }
+        }
+        xhttp.open('get', `https://reqres.in/api/users/${userId}`)
+        xhttp.send();
+    }
+
+    //post data
+    function createUserXMLHttp()
+    {
+        var xhttp = new XMLHttpRequest()
+        xhttp.onreadystatechange = () =>
+        {
+            if (xhttp.readyState == 4 && xhttp.status == 201)
+            {
+                var data = JSON.parse(xhttp.responseText)
+                console.log(xhttp.responseText)                      
+            }
+        }
+        xhttp.open('post', `https://reqres.in/api/users`)
+        xhttp.setRequestHeader('Content-type', 'application/json')
+        xhttp.send(JSON.stringify(
+            {
+                "Name" : "Jhon",
+                "Role" : "Carpenter"
+            }
+        ));
+    }
+
+    // menggunakan jQuery
+
+    function getUserJqueryAjax(userId)
+    {
+        $.ajax({
+            url : `https://reqres.in/api/users/${userId}`,
+            method: 'get',
+            success : (data) =>
+            {
+                document.getElementById('email').innerHTML = data.data.email
+                document.getElementById('firstName').innerHTML = data.data.first_name
+                document.getElementById('lastName').innerHTML = data.data.last_name
+            }
+        })
+    }
+    function createUserJqueryAjax()
+    {
+        $.ajax({
+            url:`https://reqres.in/api/users`,
+            method : 'post',
+            data: {
+                "Name" : "Jhon",
+                "Role" : "Carpenter"
+            },
+            success: (data)=>
+            {
+                console.log(data)
+            }
+        })
+    }
+
+    async function getUserFetch(userId)
+    {
+        var x = await fetch(`https://reqres.in/api/users/${userId}`, {
+            method : 'get'
+        })
+
+        var y = await x.json()
+        console.log (y)
+
+    }
+
+    // fetch
+    function getUserFetch(userId)
+    {
+        fetch(`https://reqres.in/api/users/${userId}`, {
+            method : 'get'
+        }).then ((res) =>
+        {
+            if(res.ok)
+            {
+                return res.json();
+            }
+            else
+            {
+                return Promise.reject({
+                    "status" : res.status,
+                    "statusText" : res.statusText
+                })
+            }
+        }).then ((data) =>
+        {
+            document.getElementById('email').innerHTML = data.data.email
+            document.getElementById('firstName').innerHTML = data.data.first_name
+            document.getElementById('lastName').innerHTML = data.data.last_name
+        }).catch((error)=>
+        {
+            console.log ("Error : " + JSON.stringify(error))
+        })  
+    }
+
+    //pake async await
+    async function getUserAsyncAwaitFetch(userId)
+    {
+        var x = await fetch(`https://reqres.in/api/users/${userId}`, {
+            method : 'get'
+        })
+        
+        var y = await x.json()
+        console.log(y)
+    }
+
+
+    function createUserFetch()
+    {
+        fetch(`https://reqres.in/api/users`, {
+            method : 'post',
+            headers : 
+            {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify({
+                "Name" : "jhon",
+                "Role" : "Carpenter"
+            })
+        }).then ((res) =>
+        {
+            if(res.ok)
+            {
+                return res.json();
+            }
+            else
+            {
+                return Promise.reject({
+                    "status" : res.status,
+                    "statusText" : res.statusText
+                })
+            }
+        }).then ((data) =>
+        {
+            console.log (data)
+        }).catch((error)=>
+        {
+            console.log ("Error : " + JSON.stringify(error))
+        })  
+    }
+</script>

@@ -1,0 +1,37 @@
+Fragment 
+    > Reusable portion of your application UI
+        > Tampilan yang bisa digunakan berulang kali 
+    > Has it own lifecycle
+        > punya lifecycle sendiri jadi mirip mirip sama activity
+    > Must be inside an activity
+        > harus ada di dalam activity 
+    > One activity can contains many fragments  
+        > 1 activity bisa mengandung banyak fragment sebagai parent nya atau hostnya
+
+    Use of Fragment 
+        > menggunakan fragment untuk bagian yang akan digunakan berulang kali di page-page lainnya
+        > digunakan juga untuk di multi tablet sehingga. 
+        > biasanya di atas 
+
+    Fragment lifecycle
+        > Fragment  | Fragment Callbacks    | View lifecycle
+          lifecycle |                       |
+        > CREATED   |   onCreate()          | Initialized       | Jarang digunakan dalam Fregment 
+        > CREATED   | onViewCreate()        | Initialized       | ini paling sering digunakan, ex mau pake xml yang mana dsbnya 
+        > CREATED   | onCreateView()        | Initialized       | ini juga paling sering digunakan, ke trigger ketika habis seelsai buat callback yang di atas, aman melakukan editing teks dsvbya disini 
+        > CREATED   | onViewStateRestored() | CREATED           |   
+        > STARTED   | onStart()             | STARTED
+        > RESUMED   | onResume()            | RESUMED
+        > STARTED   | onPause()             | STARTED
+        > CREATED   | onStop()              | CREATED
+        > CREATED   | onSaveInstanceState() | CREATED
+        > CREATED   | onDestroyView()       | DESTROYED
+        > DESTROYED | onDestroy()
+
+Fragment Manager -> Untuk mengatur Fragment, list Transaction : 
+> Add -> nambahin Fragment ke kontainer jadinya di tambah sehingga ada 2 fragment
+> Replace -> kalo ini ngeganti alisa delete dulu trus di add 
+> Remove -> ini ngehapus dari container nya 
+> Bisa di chaining transactionnya 
+
+Passing data from activity

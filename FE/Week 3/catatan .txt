@@ -1,0 +1,86 @@
+Display 
+> Bagaimana cara kita menampilkan suatu element 
+> semua ini merupakan property dari css yang namanya display dengen berbagai macam type
+    > inline 
+        > Artinya di dalam baris dan tidak membuat baris baru sebagian CSS properties di disable seperti width, height, margin-top
+        > span, a, img -> defaultnya inline
+    > block
+        > kalo ini sebaliknya dengan inline sehingga langsung membuat baris baru 
+        > banyak CSS properties diperbolehkan 
+        > div, p, form, header, section, footer defaultnya adalah block
+    > inline-block 
+        > gabungan dari inline dan block 
+        > jadi tidak langsung membuat baris baru (inline)
+        > banyak CSS properties di enable (block) ex height, widht dll
+    > none
+        > artinya element ini tidak di perlihatkan di web
+        > menghilang atau invisible  
+        > ada dua tipe display: none dan visibility: hidden 
+            > perbedaannya ada di hasil akhirnya jika display maka akan dianggap kosong 
+            > jika di visibility maka dia akan seperti di kasih tinta warna putih 
+    > table 
+    > flex
+    > grid
+Positioning 
+    > position : (CSS)
+    > position dibagi menjadi : 
+        > static
+            > default position ga ada yang spesial
+            > posisinya selalu mengikuti urutan 
+            > gak bisa di posisiin sesuka hati kaya yang lain 
+            > tidak bisa di set top, bottom, left, right nya 
+        > relative
+            > posisinya bisa di set mau seberapa jauh kita dari posisi normalnya atau posisi staticnya
+            > bisa diatur top, bottom, left, rightnya
+        > absolute
+            > posisinya relative terhadap suatu elemen yang posisinya relative 
+            > sehingga nilai top, bottom , left rightnya memiliki pusat dari element terdekat yang memiliki posisi relative
+            > jika ga ada element terdekat yang relative maka dia akan mengacu ke body 
+        > fixed
+            > relativenya terhadap window browser 
+            > 11 12 dengan absolute 
+            > ketika di scroll dia akan ngikut dan selalu terlihat  
+            > dan bisa di set top, bottom. left, dan right
+        > sticky
+            > merupakan gabungan dari 3 posisi 
+            > tipe posisi yang paling adaptive
+            > posisi nya relative terhadap posisi scroll nya 
+Layouting
+> Bagaimana kita mengaarage setiap element supaya webnya tampil lebih bagus 
+> supaya webnya terlihat estetik dan konsisten 
+> biasanya terdiri dari : 
+    > header
+    > Navigation
+    > Content
+    > Sidebar jika diperlukan 
+    > footer
+
+> Semantic Elemenets : 
+    > melingkupi HTML tag, sehingga Friendly terhadap dev dan browser 
+    > ex Non semantic -> <div>, <span>
+    > semantic -> <header> <footer> <section>
+    > berikut termasuk dalam semantic element : 
+        > <header> -> mendefinisikan header
+        > <nav> -> mendefinisikan navigaton link
+        > <aside> => memdefinisikan sidebar / content dari page content
+        > <main> -> mendefinisikan main content dari page tersebut
+        > <footer> -> mendefinisikan footer dari web tersebut
+        > selain lima di atas ada juga semantic element : 
+            > <article> define independent, self-contained content // bayangin kaya koran ada setiap artikel per artikel
+            > <details> additional details user can show / hide //bayangin kartu yu gi oh ada detailnya 
+            > <figure> define self-contained content, but for photograph, diagram, etc // ini gambar 
+            > <figcaption> define caption for <figure> //buat ngasih sumber gambar gitu gitu deh
+            > <mark> define highlighted text 
+            > <section> define section of Document //ada bagian recomendetion atau favorite dll
+            > <summary> define visible heading for <detail> // penjelasannya dari detail
+            > <time> define time 
+Study Case
+> implementasi semua hal tersebut ke dalam case 
+> design sebuah home page penjualan mobil dengan detail sbb : 
+    > Header -> Car Shop Name
+    > Navigation -> Home, About, Car List, Contact 
+    > Sidebar -> Popular Cars
+    > Content -> Shop News
+    > Footer -> Copyright
+
+Final Project Front End 

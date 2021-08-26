@@ -1,0 +1,31 @@
+FlexBox ?? -> semacam display
+    > Cara yang lebih efisien dalam mendistribusi item item 
+
+> flex-growth -> menambah ukuran x kali lipat dari ukuran standar 
+> flex-besis    -> membuat ukurannya mengikuti isi dari dalam flex tersebut
+> flex-shrink -> membuat ukuran mengecil sebanyak x kali dari ukuran standar
+
+> flex-wrap -> defaultnya nowrap tapi kalo dikasih wrap nanti dia flexnya akan otomatis enter kalo barisnya udah penuh
+            > kalo value nya dijadi9in wrapreverse maka dia akan memnuhin yang di bawah dulu baru ke atas ibaratnuya kebalik 
+
+> Justify Content 
+    > untu kngatur posisi flexbox : 
+    > tipe tipenya adalah : 
+        > flex-start -> rata kiri
+        > flex-end -> rata ke kenan
+        > center -> rata di tengah 
+        > space-between -> penuhin semua baris dengan di jarakin spasi sampe ujung-ujngnya penuh
+        > space-around -> sama kaya space-between tapi sebelum ujung kanan sama ujung kiri dikasih spasi 
+        > space-evenly -> dia ngespasi dengna ukuran yang sama antar objeknya
+    > space - space sering dipake 
+> Align Item 
+    > meratakan ukuran di skala windows bukan di baris seperti justify  Content
+    > tipe tipe value dari align item adalah : 
+        > flex-start -> mentok semua di atas 
+        > flex-end -> mentok semua di bawah 
+        > center -> di tengah tengah windows atau di layar 
+        > stretch -> maksa panuhin semua layar
+                    > mengembang sebesar kontainer nya 
+                    > bisa dipake kalo tinggi flexnya ga di kasih 
+    
+

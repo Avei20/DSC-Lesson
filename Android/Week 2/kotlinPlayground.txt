@@ -1,0 +1,313 @@
+//Function 
+//Deklarasi Function
+// fun <nama_function> (<parameter>) : <return_type> 
+// {
+//         return type ini ga harus ada
+// }
+// 
+fun max (var1: Int, var2: Int) //no return type
+{
+	if (var1 > var2) println ("$var1 is greater than $var2")
+    else println("$var2 is greater than $var1")
+}
+
+//OOP
+//membuat sebuah class Manusia
+//method adalah suatu hal yang bisa dilakukan oleh manusia ini 
+//ada tiga buat attribut di Kotlin untuk melakukan Encapsulation 
+//public, private, protected, internal 
+//public -> bisa diakses oleh semua. semua var di kotlin by default udah public 
+//
+
+class Manusia() //penamaan Class di kotlin mengikuti naming convesion Pascal case setiapada kata baru maka akan diikuti dengan huruf besar
+{
+    //Attribut
+    var mata = 2
+    var hidung = 1
+    var mulut = 1
+    //dll
+//     public var nama:String // nama ada adalah hal yang semua orang boleh tau 
+   	private var jantung = 1  ;
+    protected var perut = 1 //data yang boleh diketahui oleh kita dan anak anak kita 
+    //internal hanya dapat dilihat oleh modul yang sama 
+     
+    //Method
+    fun bernafas ()
+    {
+        println("Benafas dengan $hidung hidung saya")
+    }
+}
+
+//Inheritance -> Warisan 
+//Suatu class yang mewariskan semua attributnya ke kelas lain 
+
+open class Animal() //parent 
+{
+    //Attribute 
+    var eyes = 2
+    var mulut = 1
+    protected var hearth = 1 // artinya dog juga mengetahui jika dia memiliki jantung
+    private var stomacth = 1 // artinya dog dan cat tidak mengetahui jika dia memiliki stomach 
+    
+    //Method 
+    open fun makeASound() //suoaya bisa di override sama child
+    {
+        
+    }
+}
+
+class Dog() : Animal() // menjadi child Animal 
+{
+    override fun makeASound () //Polymorphism
+    {
+        println("Wof Wof")
+	}
+    fun move () 
+    {
+        println("Walking")
+	}
+    
+    fun move (danger: Boolean) //Overloading dari move 
+    {
+        if (danger) println("Run")
+        else println("walking")
+    }
+}
+
+class Cat() : Animal() // menjadi child Animal
+{
+    override fun makeASound ()
+    {
+        println("Meow ! Nyan !")
+//         println ("$stomach") tidak akan dapat dilihat oleh dog 
+    }
+}
+
+fun strlen (text: String) : Int 
+{
+    return text.length
+}
+
+//Extension Feature in Kotlin 
+// menambahkan function ke dalam classnya Kotlin tapi ini ga wajib dipake 
+fun String.strlength () : Int
+{
+	return this.length
+}
+
+fun main() {
+    
+    
+//     var a = 5
+//     var b = 6
+//     var c = 4
+//     var d = 8
+    
+// //     if (a > b) println("A is greater than B")
+// //     else println("B is greater than A")
+//     max(a,b)
+//     max(c,d)
+    
+   
+//     //    Data Type 
+//     //    Primitif data type
+//     //    Int -> Integer
+//     //    String -> Menyimpan teks
+//     //    Float atau Double -> angka kome perbedaannya ada di presisi keduanya 
+//     //    long -> menyimpan angka lebih banyak dari int
+
+//     // Variable Declaration 
+//     // ada dua cara, var dan val
+//     // var <nama_variable> : <tipe_data> = <nilai>
+//     // var -> mutable value package, dapat diubah setelah deklarasi
+//     // val -> immutable value , tidak dapat diubah setelah deklarasi
+//     var nama: String = "Hai semuanya"
+//     val umur: Int = 21
+    
+//    	nama = "Hai Dunia"
+// //     umur = 30 ini akan menjadi error
+    
+// //     kotlin sama kaya js dia dapat mengetahui tipe data ketika niai tersebut dimasukkan ke dalamnya
+// //     var <nama_variable> = <nilai>
+// 	var phi = "teks"
+    
+// //     phi = 3.14 apabila ini dimasukkan maka ini akan terjadi error karena tipe data variable tidak bisa diganti setelah pemasukkan nilai dari variable tersebut
+    
+//     println ("${phi::class.simpleName}")
+     
+//     //Conditional Statement (if-else)
+//     //jika maka 
+   	
+//     var nilai = 80
+    
+//     if(nilai > 85)
+//     {
+//         println("Great")
+// 	} 
+//     else if (nilai > 75)
+//     {
+//         println("Good")
+// 	}
+//     else
+//     {
+//         println("Okay")
+//     }
+    
+//     var bool = true
+    
+//     when (bool)
+//     {
+//         true -> {println ("True")}
+//         false -> {println("False")}
+// 	}
+  
+// //   	Repetition 
+//   	for (index in 0..4) //mengulang dari 0 sampai 4 .. adalah inrange operatornya kotlin, kalo ini jadi sama kaya i<=
+//     {
+//         println("Test = $index") //$ di sini sama seperti % di C tapi langsung assign nama variablenya
+//     }
+    
+//     for (index in 0 until 4) // ini dia jadi kaya i < 
+//     {
+//         println("Test = $index")
+//     }
+    
+//     for (index in 10 downTo 0 ) //kalo ini looping mundur atau decrement
+//     {
+//         println("Down To = $index")
+// 	}
+    
+//     for (index in 10 downTo 0 step 2) // step ini setiap looping nambahnya brapa kali defaulnya 1 dikasih step jadinya 2 
+//     {
+//         println ("Step = $index")
+//     }
+    
+//     var count = 0
+//     while (count < 5)
+//     {
+//         println("while - $count")
+//         count++
+// 	}
+    
+//   	count = 0
+//     do 
+//     {
+//         println("Do While = $count")
+//         count++
+//     } while (count < 5)
+    
+//     repeat (3) // di alam kurung adalah banyak looping nya 
+//     {
+//         println("repeat")
+// 	}
+    
+//     //Collection 
+//     //Array 
+// //     var names = arrayOf<String> ("a", "b", "c") //ga perlu declare data type nya karena auto kedeteksi
+//     var names = arrayOf ("a", "b", "c") //static array nilainya bisa diubah kaya array biasa
+//     var list = listOf ("z", "x", "c") 	//static(?) array namun nilainya tidak bisa diubah ini jadi dinamic array namun typenya const
+    
+//     names[0] = "c"
+    
+// //     list[0] = "a" akan error karena list gabisa diubah 
+// //     list.add("daf") error juga karena gabisa ditambah
+//  	println(names[0])   
+    
+//     var mutableList = mutableListOf ("a", "b", "c") // ini baru dynamic array kayak list biasa di java
+//     println(mutableList)
+//     mutableList.add("69") //nambahin nilai baru ke dalam mutableList 
+//     println(mutableList)
+    
+//     for (index in mutableList)
+//     {
+//         println(index)
+//     }
+    
+//     mutableList.forEach { //lambda function nya mutableList
+//         index ->
+//         println(index)
+//     }
+    
+// //    Exception Handling
+// //     Exception adalah suatu event yang muncul akibat error yang menggangu program kita 
+// //     oleh karena itu harus kita Handling
+//    		var a = 2
+//         try 
+//         {
+//          // code yang akan menyebabkan exception  
+//         	a = 8/0
+//         } 
+//        // e: Exception in sangat generan sehingga kalo mau dibagi bagi bisa di 
+//         catch(e: NullPointerException)
+//         {
+//             //bagaimana cara merselove masalah juga excetion ini masuk di dalam block try 
+//             println("NullPointerException Occured!")
+//         }
+//         catch (e : ArithmeticException)
+//     	{
+//             println("An ArithmeticException has Occured!") 
+// 		}
+//         finally 
+//         {
+//             // dijalakan jika ada atauopun ga ada errornya 
+//             // ini sifatnya opsional 
+//         	println(a)
+//         }
+
+// //     OOP 
+// //     Class -> Blueprint
+// //     Object -> Blueprint dari object tersebut
+    
+//     var list = listOf(1,2,3) // ini kita membuat sebuah object dari class list yang dimiliki oleh kotlin
+//     println("${list::class.simpleName}") // menampilkan class asalnya 
+    
+//     var manusia = Manusia() // membuat sebuah Object Manusia
+    
+//     println(manusia.mata)
+//     println("${manusia::class.simpleName}")
+//     manusia.bernafas()
+    
+//     var dog = Dog()
+//     var cat = Cat()
+    
+//     println(dog.eyes)
+//     dog.makeASound()
+//     cat.makeASound()
+//     dog.move()
+//     dog.move(true)
+    
+    //Null safety -> fitur yang sangat dibanggakan oleh Kotlin 
+    var neverNull:String = "text"
+//     neverNull = null akan error karena tipe datanya tidak boleh NUL
+    var maybeNull:String? = "Maybe Null"
+    var typeInfer = "String"
+//     typeInfer = null akan error karena secara default tipe data kotlin tidak boleh null
+//     maybeNull = null // ini bisa karena ada tanda ? yang mengartikan jika variable ini boleh memiliki nilai null
+    
+//     println(strlen(neverNull))
+//     println(strlen(maybeNull)) //ini akan error karena parameter function tidak bisa menerima datatype yang null
+//     println(strlen(maybeNull!!)) //menggunakan operator double bank namun ini sangat dihindari karena suatu saat kita dapat mengassign data null di dalam variable mayubenull ini
+    
+    
+//     //Scooping Function 
+//     // scooping dapat digunakan untuk mengggantikan double bank dengan cara : 
+// //     maybeNull?.let { it -> // let ini akan melakukan null check jika engga nul maka akan jalan let ini merupakan lambda function
+// //         println(strlen(it))
+// //     }
+    
+//     //apply untu melakukan object configuration 
+//     var dog = Dog()
+//     dog.apply { //untuk mengurangi pemanggilan dog. secara berulang sehingga ini cukup mempermudah
+//         eyes = 10
+//         mulut = 4
+//     }
+    
+//     println (dog.eyes)
+//     
+    maybeNull?.let {
+        println(it.strlength())
+    }
+} 
+
+link Kotlin Playground
+https://pl.kotl.in/Rj8YcLjPA

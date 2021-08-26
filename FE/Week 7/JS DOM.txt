@@ -1,0 +1,64 @@
+DOM -> Document Object Model 
+
+Statis Web -> Web yang ga ada perubahan langsung
+
+Dinamis Web -> web yang berubah sendiri ex tokopedia ada banner yang nongol sendiri 
+
+DOM -> isi document yang di HTML atau isi dari website 
+di DOM ada head body dsb 
+
+window -> skalnya lebih besar daripada document 
+        -> window ex itu yang kursor 
+
+Fade in, Fade out -> window bukan Document 
+
+Window & DOM itu dua hal yang dibahas secara bersamaan 
+
+DOM Tree
+
+Document 
+    > Root Element <html> -> Npde 
+        > Element <head>    -> Node
+            > Element <a>
+                > Text: "My Link"
+            > Attribute "href"
+            > Element <h1> 
+                > Text : "My Header"
+        > Element <body>
+            > Element <title>
+                > text : "My Title"
+
+Node -> Satu bagian 
+Node List -> banyak bagian
+HTML Collection -> Node yang khusu buat element HTML doang ex <a> <img> <body> dll
+Parent, Child dll:
+
+Ex Body : 
+Parent nya ROOT 
+Childnya Bnanyak 
+
+
+DOM Selection JS
+
+getElementById -> element
+getElementByTagName() -> HTML Collections
+getElementByClassName() -> HTML Collections
+querySelector() -> element
+querySelectorAll() -> nodeList
+
+Advance DOM JS
+document.createElement()
+    > Menciptakan Element baru kaya bikin p atau bikin section baru 
+
+document.createTextNode()
+    > ini bikin isi dari elementnya
+document.appendChild()
+    > Child adalah apapun yang ada di dalam P 
+    > 
+document.insertBefore()
+    > insert child sebelum child 
+
+parentNode.removeChild()
+parentNode.replaceChild()
+
+> DOM ini masih banyak lagi tapi pelajarin sendiri sama improve diri sendiri 

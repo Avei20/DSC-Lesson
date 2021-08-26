@@ -1,0 +1,101 @@
+> intinya cara komunikasi dengan API
+
+JSON
+    > Format data yang digunakan untuk mengirim data ke cross language
+AJAX
+    > Send Request data ke API secara Syncronus 
+Fetch API
+    > Buat Request ke API cuma returnnya Promise
+
+JSON 
+    > JavaScript Object Notation 
+    > A lightweight data-interchange Format
+    > text format that is completely language independent
+    > buat komunikasi sama bahasa lain 
+    > tiap bahasa punya library tersendiri buat handle JSON
+    > bisa dibikin jadi String trus di jadiin JSON Object
+    > dipake ketika mau ngirim sesuatu ke API atau sebaliknya 
+
+AJAX
+    > Asynchronus JavaScript and XML
+    > Kesukaannya para FE untuk mengupdate web page tanpa harus reload webnya 
+    > Bisa mengirim data ke server di background sehingga ga perlu reload 
+    > ada dua cara  
+        > metode primitif : HTML Htpps Request
+            function getUserPrimitiveAjax()
+            {
+                var http = new.XMLHttpRequest(); // buat object 
+                http.onreadystatechange = ()=>
+                {
+                    if (http.status == 200 && http.readyState == 4) // status 200 itu oke 
+                    {
+                        document.getElementById('text').innerHTML = http.responseText
+                    }
+                }
+                http.open('get', `https://reqres.in/api/users/${userId}`)
+                http.send()
+            }
+            > berikut adalah beberapa property with XMLHttpRequest
+                > onreadystatechange
+                    > Define a function to be called when the readyState property changes
+                > readyState, buat nampung status dari XMLHttpRequest ada 4 nilai : 
+                    > 0 -> request not initialized
+                    > 1 -> Server Connection Established
+                    > 2 -> Request Received
+                    > 3 -> processing request 
+                    > 4 -> request finished and response is ready 
+                    > 0-3 jarang dipake biasanya pake yang 4 aja langsung
+                > status : ada beberapa nilai yaitu 
+                    > 200 : "OK"
+                    > 403 : "Forbidden"
+                    > 404 : "Page not found"
+                > statusText -> sama kaya status cuma returnnya text bukan angka.
+        > metode terbaru menggunakan Jquery: 
+            > mensimple kan XMLHttpRequest
+            function getUserJqueryAjax()
+            {
+                $.ajax(
+                    {
+                        method: 'get',
+                        url: `https://reqres.in/api/users/${userId}`,
+                        success: (res) =>
+                        {
+                            document.getElementById('text').innerHTML = JSON.stringify(res)
+                        }
+                    }
+                )
+            }
+
+            > lebih enak di pandang dan dimengerti 
+            > ga boleh dipake jQuery pas Final Project 
+    
+Fetch API
+    > hal baru yang ada di JS
+    > beberapa browser versi lama tidak support 
+    > contoh penggunaannya : 
+        function getUserFetch()
+        {
+            fetch(`https://reqres.in/api/users/${userId}`, {method: 'get'})
+                .then(async (res) => 
+                {
+                    var json = await res.json();
+                    document.getElementById('text').innerHTML = JSON.stringify(json)
+                })
+        }
+    > dibalikin dalam bentuk promise sehingga harus .then atau sync await
+    > Fetch boleh dipake di final Project
+    > Pros : 
+        > Simple
+    > Cons : 
+        > Not Rejecting whtn there's http Error
+        > manual check response buat ngecover ini 
+
+JSON : fornat data buat komunikasi ke server, karena JSON ini lightweight (-> string -> object)
+ universal karena semua program languange punya built-in function buta handle JSON 
+-> request post : passing objectnya JSON -> Di stringify biar jasi Object
+-> response dari API : JSON 
+
+AJAX : untuk request ke server/api, tanpa perlu reload page
+
+Fetch : buat ngefetch data dari API cuma return nya promise -> pake async await & lebih modern 
+

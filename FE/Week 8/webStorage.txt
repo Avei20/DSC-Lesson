@@ -1,0 +1,18 @@
+Web Storage 
+> Kemampuan menyimpan data secara lokal di web browser
+
+Keuntungan 
+    > lebih aman dari cookie
+    > bisa menampung banyak data yang lebih besar 
+    > 10 Mb data, cookie 4Mb 
+
+Type of Web Storage 
+> Session Storage
+    > Pas Tabnya di tutup datanya ilang
+> Local Storage
+    > pas tabnya di tutup engga akan hilang 
+    > di console localStorage.setIem('name')
+
+Web storage ini menyimpan data sebagai String 
+jadi diakalin jadi JSON String pake JSON.stringify ()
+JSON.parse buat ngambil datanya dalam bentuk object
